@@ -1,0 +1,34 @@
+{
+  "target_model": "Porsche 911 (992.1) Coupe / Carrera 4 GTS",
+  "years": [
+    2020,
+    2024
+  ],
+  "mileage_km_max": 50000,
+  "accident": "Unfallfrei only",
+  "owners_max": 2,
+  "warranty": "Porsche Approved >= 12 months",
+  "must_have": [
+    "Sport Chrono Paket",
+    "Liftsystem Vorderachse (Front Axle Lift)",
+    "Hinterachslenkung (Rear-axle steering)",
+    "Adaptive cruise (Abstandsregeltempostat / InnoDrive)",
+    "LED-Matrix / PDLS Plus",
+    "BOSE or Burmester",
+    "Adaptive Sports Seats Plus (18-way)"
+  ],
+  "nice_to_have": [
+    "90L fuel tank (Kraftstoffbehälter 90 l)",
+    "Surround View / 360° camera",
+    "Glass sunroof (Schiebe-/Hubdach aus Glas)",
+    "PPF / Steinschlagschutzfolie"
+  ],
+  "geo_priority": [
+    "Munich",
+    "Bavaria",
+    "Regensburg",
+    "Augsburg",
+    "Ingolstadt"
+  ],
+  "price_eur_max": 150000
+}

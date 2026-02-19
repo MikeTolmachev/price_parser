@@ -1,0 +1,36 @@
+app:
+  timezone: Europe/Berlin
+  report_path: reports/latest.md
+  database_path: data/monitor.db
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  request_delay_seconds: 4
+
+sources:
+  porsche_finder:
+    enabled: true
+    urls:
+      - "https://finder.porsche.com/de/de-DE/search?model=911&generation=992&condition=used&country=DE&maxMileage=50000&maxPrice=150000"
+
+  mobile_de:
+    enabled: true
+    urls:
+      - "https://suchen.mobile.de/fahrzeuge/search.html?dam=0&isSearchRequest=true&ms=19000%3B8%3B%3B&maxMileage=50000&maxPrice=150000&minFirstRegistrationDate=2020-01-01&maxFirstRegistrationDate=2024-12-31&cn=DE&s=Car&vc=Car"
+
+  autoscout24:
+    enabled: true
+    urls:
+      # 992.1 Carrera 4 GTS, used, Germany, <=50k km, <=150k EUR, 2020-2024
+      - "https://www.autoscout24.de/lst/porsche/911?sort=standard&desc=0&atype=C&damaged_listing=exclude&cy=D&fregfrom=2020&fregto=2024&kmto=50000&priceto=150000&search_id=carrera+4+gts"
+      # Broader: all 992 Coupe/GTS variants
+      - "https://www.autoscout24.de/lst/porsche/911?sort=standard&desc=0&atype=C&damaged_listing=exclude&cy=D&fregfrom=2020&fregto=2024&kmto=50000&priceto=150000"
+
+  porsche_de:
+    enabled: true
+    urls:
+      - "https://finder.porsche.com/de/de-DE/search?model=911&generation=992&condition=approved&country=DE&maxMileage=50000&maxPrice=150000"
+
+notifications:
+  telegram:
+    enabled: false
+    chat_id: ""
+    # Set TELEGRAM_BOT_TOKEN in .env file

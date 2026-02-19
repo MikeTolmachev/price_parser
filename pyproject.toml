@@ -1,0 +1,21 @@
+
+[project]
+name = "porsche-monitor"
+version = "0.1.0"
+description = "Monitor listings for Porsche 911 (992.1)"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31",
+  "beautifulsoup4>=4.12",
+  "pydantic>=2.6",
+  "PyYAML>=6.0",
+  "python-dotenv>=1.0",
+  "tenacity>=8.2",
+  "rich>=13.7",
+  "cloudscraper>=1.2.71",
+  "curl_cffi>=0.7",
+  "streamlit>=1.30",
+]
+
+[project.scripts]
+porsche-monitor = "porsche_monitor.cli:main"
