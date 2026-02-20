@@ -8,7 +8,7 @@ from typing import Optional
 from .schema import Listing, FilterResult
 
 
-def load_criteria(path: str | Path = "criteria.json") -> dict:
+def load_criteria(path: str | Path = "config/criteria.json") -> dict:
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 

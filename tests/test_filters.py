@@ -6,7 +6,7 @@ from porsche_monitor.filters import load_criteria, evaluate
 
 
 def _criteria() -> dict:
-    return json.loads(Path("criteria.json").read_text(encoding="utf-8"))
+    return json.loads(Path("config/criteria.json").read_text(encoding="utf-8"))
 
 
 def _make_listing(**overrides) -> Listing:

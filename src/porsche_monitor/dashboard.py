@@ -15,8 +15,8 @@ from porsche_monitor.storage import Storage
 # Data loading
 # ---------------------------------------------------------------------------
 
-DEFAULT_CONFIG = "config.yaml"
-DEFAULT_CRITERIA = "criteria.json"
+DEFAULT_CONFIG = "config/config.yaml"
+DEFAULT_CRITERIA = "config/criteria.json"
 
 
 @st.cache_data(ttl=60)

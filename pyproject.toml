@@ -19,3 +19,6 @@ dependencies = [
 
 [project.scripts]
 porsche-monitor = "porsche_monitor.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

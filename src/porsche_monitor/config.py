@@ -34,7 +34,7 @@ class Config(BaseModel):
     notifications: NotificationsConfig = Field(default_factory=NotificationsConfig)
 
     @classmethod
-    def from_yaml(cls, path: str | Path = "config.yaml") -> Config:
+    def from_yaml(cls, path: str | Path = "config/config.yaml") -> Config:
         with open(path, "r", encoding="utf-8") as f:
             raw = yaml.safe_load(f) or {}
         sources = {}

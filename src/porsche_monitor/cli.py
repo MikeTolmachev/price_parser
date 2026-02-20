@@ -27,7 +27,7 @@ def _setup_logging() -> None:
     )
 
 
-def run(config_path: str = "config.yaml", criteria_path: str = "criteria.json") -> None:
+def run(config_path: str = "config/config.yaml", criteria_path: str = "config/criteria.json") -> None:
     load_dotenv()
     _setup_logging()
 
@@ -94,7 +94,7 @@ def run(config_path: str = "config.yaml", criteria_path: str = "criteria.json") 
     )
 
 
-def export(config_path: str = "config.yaml", fmt: str = "md") -> None:
+def export(config_path: str = "config/config.yaml", fmt: str = "md") -> None:
     load_dotenv()
     _setup_logging()
 
@@ -149,13 +149,13 @@ def main() -> None:
 
     # run command
     run_parser = sub.add_parser("run", help="Run a single monitoring cycle")
-    run_parser.add_argument("--config", default="config.yaml", help="Config file path")
-    run_parser.add_argument("--criteria", default="criteria.json", help="Criteria file path")
+    run_parser.add_argument("--config", default="config/config.yaml", help="Config file path")
+    run_parser.add_argument("--criteria", default="config/criteria.json", help="Criteria file path")
 
     # export command
     export_parser = sub.add_parser("export", help="Export stored listings to report")
     export_parser.add_argument("--format", default="md", choices=["md"], help="Export format")
-    export_parser.add_argument("--config", default="config.yaml", help="Config file path")
+    export_parser.add_argument("--config", default="config/config.yaml", help="Config file path")
 
     # dashboard command
     dash_parser = sub.add_parser("dashboard", help="Launch Streamlit dashboard")
